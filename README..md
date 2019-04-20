@@ -40,7 +40,7 @@ To summarize and present analysis of Fisher's Iris data set. Programming and Scr
 ### 3.1 Analysis of each individual specie
 As can be seen in the header picture, each Iris specie has a Sepal and a Petal. From the measurements of the lengths and widths of both the Sepal and the Petal, we have calculated a few basic statistics for each specie. Please see the results below for the minimum, maximum, and average lengths and widths of sepal and petal for each specie, along with the scatter (Max - min) and the standard deviation for each attribute.
 ![statistics.png](/Images/statistics.png) 
-These stats were calculated and presented in the above table using [statistics.py](statistics.py). By running this program [statistics_10-04-2019.csv](statistics_10-04-2019.csv) is generated.
+These stats were calculated and presented in the above table using [statistics.py](statistics.py). By running this program [statistics_20-04-2019.csv](statistics_20-04-2019.csv) is generated.
 
 ### 3.2 Comparison of species for individual attributes
 In order to compare and contrast each specie, please see the below plots ![Comparison_of_Iris_species_for_individual_attributes.png](/Images/Comparison_of_Iris_species_for_individual_attributes.png) These plots were produced by running [comparison.py](comparison.py) and the resulting plots saved to [Comparison_of_Iris_species_for_individual_attributes.png](/Images/Comparison_of_Iris_species_for_individual_attributes.png) in the Images folder of the directory. 
@@ -68,9 +68,11 @@ The ability to apply statistics and mathematics to distinguish one entity from a
 *5.* https://www.youtube.com/watch?v=azXCzI57Yfc  
 *6.* https://gist.github.com/curran/a08a1080b88344b0c8a7
 
-statistics.py:          Ref https://docs.python.org/3/library/csv.html
+statistics.py:          https://docs.python.org/3/library/csv.html
+
 comparison.py:          https://matplotlib.org/gallery/subplots_axes_and_figures/subplot.html
                         https://stackoverflow.com/questions/39164828/global-legend-for-all-subplots
+
 dimensional_ratios.py:  https://stackoverflow.com/questions/45862223/use-different-colors-in-scatterplot-for-iris-dataset
                         https://towarddatascience.com/customizing-plots-with-python-matplotlib-bcf02691931f
 
