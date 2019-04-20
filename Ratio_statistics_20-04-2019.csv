@@ -1,0 +1,7 @@
+,,length/width dimensional ratios,,
+Sepal or Petal?,Statistic,Setosa,Versicolor,Virginica
+Sepal,Average,1.474,2.163,2.236
+Sepal,Std Dev,0.119,0.228,0.244
+Petal,Average,7.080,3.245,2.780
+Petal,Std Dev,3.124,0.312,0.407
+
