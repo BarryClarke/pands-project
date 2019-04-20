@@ -11,7 +11,9 @@ To summarize and present analysis of Fisher's Iris data set. Programming and Scr
 3. Analysing the data set
     - 3.1 Analysis of each individual specie
     - 3.2 Comparison of species for each individual attribute
-4. Final Thoughts
+    - 3.3 Comparison of species for dimensional ratios
+4. Fisher's work on the data set
+5. Final Thoughts
 5. References
 
 ## 1. Background
@@ -25,7 +27,7 @@ To summarize and present analysis of Fisher's Iris data set. Programming and Scr
 * Responsible for many other statistcal techniques such as [Analysis of Variance](http://leansixsigmadefinition.com/glossary/anova/), [P-value](https://en.wikipedia.org/wiki/P-value), and [Linear discriminant analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
 
 ### Fisher's Iris dataset
-* Linear Discriminant Analysis (LDA) is a statistiacl technique used in many applications including machine learning, image recognition and genetics. It focuses on maximising the seperability between two groups among known categories in order to differentiate the two groups and hence allow decisions to be made regarding the categories. 
+* Linear Discriminant Analysis (LDA) is a statistical technique used in many applications including machine learning, image recognition and genetics. It focuses on maximising the seperability between two groups among known categories in order to differentiate the two groups and hence allow decisions to be made regarding the categories. 
 * A good example of the application of LDA would be deciding which patients, with a particular illness, should be treated with a specific drug and which should not. LDA is a statistical technique that can use genetics to determine this with high statistical accuracy. See the following video: [Statquest: Linear Discriminant Analysis](https://www.youtube.com/watch?v=azXCzI57Yfc). *[5]*
 * Fisher's Iris data set is a multivariate data set introduced by Ronald Fisher in his 1936 paper *[The use of multiple measurements in taxonomic problems](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x)* *[3]* as an example of Linear discriminant analysis.
 
@@ -44,19 +46,21 @@ These stats were calculated and presented in the above table using [statistics.p
 In order to compare and contrast each specie, please see the below plots ![Comparison_of_Iris_species_for_individual_attributes.png](/Images/Comparison_of_Iris_species_for_individual_attributes.png) These plots were produced by running [comparison.py](comparison.py) and the resulting plots saved to [Comparison_of_Iris_species_for_individual_attributes.png](/Images/Comparison_of_Iris_species_for_individual_attributes.png) in the Images folder of the directory. 
 From these plots, we can make a number of observations:
 1. The sepal lengths and sepal widths for all 3 species are pretty similar, whereas there appears to be a difference in the petal length and petal widths across the 3 species.
-2. The Setosa petal length and width clearly varies from the Versicolor and Virginica petal lengths and widths. It has a smaller petal. It is is quite easy to differentiate the Setosa from the other two species on the basis of the petal dimensions
+2. The Setosa petal lengths and widths clearly vary from the Versicolor and Virginica petal lengths and widths. It has a smaller petal. It is is quite easy to differentiate the Setosa from the other two species on the basis of the petal dimensions
 3. It is more difficult to differentiate the Versicolor and the Virginica. As the plots show, although the Versicolor petal is slightly smaller in both length and width than the Virginica, there is still some crossover in the data for the Versicolor and Virginica petal. This means that, given a random petal, it would be difficult to decide whether it was a Versicolor or a Virginica.
-4. Looking at the data set a little deeper to try and find improved methods of differentiating all three species from each other with high probability, we have compared and contrasted the ratios of the length/width dimensions for the Sepal and Petal of all three species. These are shown in ![Comparison_of_dimensional_ratios_for_sepal_and_petal.png](/Images/Comparison_of_dimensional_ratios_for_sepal_and_petal.png)) in the Images directory and were calculated and plotted using the [dimensional_ratios.py](dimensional_ratios.py) program. We used pandas and represented the data in dataframes for this program, which is a different management of the data from comparison.py above.
-5. Analysing this data shows us that, once again, Setosa is quite easy to differentiate from Versicolor and Virginica. If we focus on the ratio of sepal length/sepal width, we can clearly identsify the ratio within setosa of averaging 
-4. The above gives us a good idea of the motivation of Fisher in his 1936 paper relating to the iris data set: Given a set of data from different entities, use Linear Discriminant Analysis seperate or differentiate one from another. The ability to apply statistics and mathematics to such a problem was groundbreaking and is why Fisher's paper and this data set is referenced and applied in so many area's to this day
 
-### 3.3 Fisher's work on the data set
+### 3.3 Comparison of species for dimensional ratios
+Looking at the data set a little deeper to try and find improved methods of differentiating all three species from each other with high probability, we have compared and contrasted the ratios of the length/width dimensions for the Sepal and Petal of all three species. These are shown below ![Comparison_of_dimensional_ratios_for_sepal_and_petal.png](/Images/Comparison_of_dimensional_ratios_for_sepal_and_petal.png) and were calculated and plotted using the [dimensional_ratios.py](dimensional_ratios.py) program. In this program the data was represented in dataframes and Pandas were used to manipulate it, which is a different management of the data from comparison.py above.
+Analysing this data shows us that, once again, Setosa is quite easy to differentiate from Versicolor and Virginica. If we focus on the ratio of sepal length/sepal width ratios below, we can see the average ratio  and standard deviation for both sepal and petal within setosa vary significantly from those of Vesicolor and Virginica, however, differentiating Versicolor from Virginica using these statistics still proves difficult. ![Ratio_statistics.png](/Images/Ratio_statistics.png)
+
+## 4. Fisher's work on the data set
+The above gives us a good idea of the motivation of Fisher in his 1936 paper relating to the iris data set: Given a set of data from different entities, use Linear Discriminant Analysis to seperate or differentiate one from another. The paper used statistical methods "to chose a variate so as to maximise the distinctness of the species"* *[3]*. Using these statistical methods, the Setosa distinctness was attainable using the data set. It was found that the dats set of 4 measurements from 50 samples of each specie was solely sufficient to uniquely distuinguish the Versicolor from the Virginica. Using additional knowledge of the genetic make up of the species, coupled with the results from the LDA work shown in the paper could be combined to the distinctiveness of Versicolor to Virginica
+
+## 5. Final Thoughts
+The ability to apply statistics and mathematics to distinguish one entity from another was groundbreaking and is why Fisher's paper and this data set is referenced and applied in so many area's to this day. This method has been applied to many area's, not least data analytics and machine learning.  
 
 
-
-## 4. Final Thoughts
-
-## 5. References
+## 6. References
 *1.* http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/WholeStory-Iris.html  
 *2.* http://leansixsigmadefinition.com/glossary/ronald-fisher/  
 *3.* R.A. Fisher (1936). ["The use of multiple measurements in taxonomic problems"](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x). Annals of Eugenics. **7**(2): 179-188  
@@ -64,7 +68,12 @@ From these plots, we can make a number of observations:
 *5.* https://www.youtube.com/watch?v=azXCzI57Yfc  
 *6.* https://gist.github.com/curran/a08a1080b88344b0c8a7
 
-comparison.py: https://matplotlib.org/gallery/subplots_axes_and_figures/subplot.html
+statistics.py:          Ref https://docs.python.org/3/library/csv.html
+comparison.py:          https://matplotlib.org/gallery/subplots_axes_and_figures/subplot.html
+                        https://stackoverflow.com/questions/39164828/global-legend-for-all-subplots
+dimensional_ratios.py:  https://stackoverflow.com/questions/45862223/use-different-colors-in-scatterplot-for-iris-dataset
+                        https://towarddatascience.com/customizing-plots-with-python-matplotlib-bcf02691931f
+
 
 
 
